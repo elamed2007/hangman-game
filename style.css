@@ -1,0 +1,529 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: #000;
+}
+
+body{
+    background: linear-gradient( #6b02ff, #600083);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+/* this style only appiles to btn replay et exit */
+.btn{
+    position: relative;
+    bottom: 40px;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0px 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    
+}
+
+/* this style appiles to btn de clavier et box d'affichage(en gray) */
+.box{
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    margin: 5px;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 27px;
+}
+
+#game{
+     display: flex;
+     flex-direction: column;
+     justify-content: center ;
+     align-items: center;
+     width: 100%;
+     height: 100%;
+     filter: blur(10px);
+}
+
+.clavier{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+    background-color: grey;
+    border-radius: 10px;
+    margin-top  : 10px;
+}
+
+.key-row{
+    display: flex;
+    justify-content: center;
+    margin: 3px 0;
+}
+
+.key-row-2{
+    padding: 0 8px;
+}
+
+.key-row-3{
+    padding: 0 22px;
+}
+
+
+
+
+.letter{
+    flex: 1;
+    max-width: 70px;
+    height: 45px;
+    background-color: black;
+    color: blue;
+    margin: 3px;
+    border: none;
+    box-shadow: 1px 1px 15px #000;
+    border-radius: 6px;
+}
+
+.letter:hover{
+    cursor: pointer;
+    background-color: rgb(41, 41, 41);
+}
+
+.affichage{
+    display: flex;
+}
+
+.result{
+    background-color: #b3adad;
+    height: 55%;
+    width: 50%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: blueviolet;
+    padding: 10px 15px;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.info{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+#categorie{
+    margin-right: 10px;
+}
+
+#N_attempts{
+    margin-left: 10px;
+}
+
+#Hangman{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+img{
+    width: 400px;
+}
+
+.intro{
+    width: fit-content;
+    height: 70vh;
+    background: linear-gradient( #02ff13, #006083);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    z-index: 1;
+}
+
+#hello{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 80px;
+    direction: rtl;
+    animation: box_hello_animation 25s linear forwards;
+}
+
+
+@keyframes box_hello_animation {
+    0%{
+      transform: translate(100%,-50%);  
+    }10%{
+      transform: translate(-50%,-50%);
+       
+    }90%{
+        transform: translate(-50%,-50%);
+    }100%{
+        transform: translate(-200%,-50%);
+    }
+}
+
+#info_game{
+    display: grid;
+    place-content: center;
+    place-items: center; 
+    text-transform: capitalize;
+    animation: box_info_game 2s linear both;
+    animation-delay: 23s; 
+}
+
+@keyframes box_info_game {
+    0%{
+      transform: translate(100%,-50%);  
+
+    }100%{
+        transform: translate(-50%,-50%);
+    }
+}
+
+.question{
+    position: relative;
+    bottom: 50px;
+}
+
+.info_p{
+    margin: 0px 15px;
+    text-align: justify;
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: rgb(1, 31, 61);
+    text-wrap: wrap;
+    
+}
+
+#btn_start{
+    position: relative;
+    top: 90px;
+    background-color: blue;
+}
+
+#btn_start:hover{
+    box-shadow: 5px 5px 20px 10px rgb(0, 119, 255);
+    transform: scale(1.1);
+}
+
+#box_end{
+    width: fit-content;
+    height: 70vh;
+    background: linear-gradient( #02ff13, #006083);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 10px 10px 15px #000;
+    padding: 0px 20px;
+    transform: scale(0);
+    animation: end 1.5s ease-out forwards;
+}
+
+@keyframes end {
+    0%{
+        transform: translate(-50%,-50%) scale(0);
+    }
+
+    100%{
+        transform: translate(-50%,-50%) scale(1);
+    }
+    
+}
+
+#emoji{
+    font-size: 140px;
+}
+
+#message_courage{
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    text-wrap: nowrap;
+    position: relative;
+    bottom: 40px;
+    direction: rtl;
+}
+
+#btn_replay{
+    background-color: green;
+}
+
+#btn_replay:hover{
+    box-shadow: 5px 5px 20px 10px rgb(5, 255, 5);
+    transform: scale(1.1);
+}
+
+#btn_exit{
+    background-color: rgb(197, 0, 0);
+}
+
+#btn_exit:hover{
+   box-shadow: 5px 5px 20px 10px rgb(255, 31, 31);
+    transform: scale(1.1); 
+}
+
+.footer{
+    width: 100%;
+    margin-top: auto;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.footer .footer-name{
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.footer .footer-desc{
+    margin: 8px 0;
+    font-size: 17px;
+    opacity: 0.9;
+    color: #fff;
+}
+
+.footer p{
+    color: #fff;
+}
+
+.linkedin-btn{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 24px;
+    border-radius: 25px;
+    background-color: #0077b5;
+    color: white;
+    font-size: 17px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.linkedin-btn:hover{
+    background-color: #005f91;
+}
+
+.contact-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.contact-btns .linkedin-btn{
+    margin-top: 0;
+}
+
+.contact-btns a:nth-child(1){
+    background-color: #25d366;
+}
+
+.contact-btns a:nth-child(1):hover{
+    background-color: #1da851;
+}
+
+.contact-btns a:nth-child(2){
+    background-color: #ea4335;
+}
+
+.contact-btns a:nth-child(2):hover{
+    background-color: #c5221f;
+}
+
+/* responsive design */
+@media (max-width: 768px){
+    .result{
+        width: 80%;
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    img{
+        width: 400px;
+    }
+
+    #Hangman{
+        margin-top: 10px;
+    }
+
+    .clavier{
+        width: 98%;
+        margin: 0;
+    }
+
+    .key-row{
+        margin: 2px 0;
+    }
+
+    .letter{
+        max-width: 55px;
+        height: 42px;
+        font-size: 22px;
+    }
+
+    .key-row-2{
+        padding: 0 3px;
+    }
+
+    .key-row-3{
+        padding: 0 15px;
+    }
+
+    .btn{
+        width: 90px;
+        font-size: 20px;
+    }
+
+    .intro,
+    #box_end{
+        width: 90%;
+        height: auto;
+        padding: 20px 15px;
+    }
+
+    #hello{
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+    #info_game{
+        text-align: center;
+    }
+
+    #message_courage{
+        font-size: 30px;
+        text-wrap: wrap;
+    }
+
+    #emoji{
+        font-size: 90px;
+    }
+
+    .footer{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px){
+    .result{
+        width: 95%;
+    }
+
+    #Hangman{
+        margin-top: 10px;
+    }
+
+    .clavier{
+        width: 100%;
+        padding: 8px;
+        margin: 0;
+    }
+
+    .key-row{
+        margin: 2px 0;
+    }
+
+    .letter{
+        max-width: 42px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .key-row-2{
+        padding: 0 3px;
+    }
+
+    .key-row-3{
+        padding: 0 12px;
+    }
+
+    .box{
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+    }
+
+    .affichage{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn{
+        width: 80px;
+        height: 35px;
+        font-size: 17px;
+        margin: 5px;
+    }
+
+    .intro,
+    #box_end{
+        width: 95%;
+    }
+
+    #hello{
+        font-size: 18px;
+    }
+
+    .info_p{
+        line-height: 24px;
+        font-size: 14px;
+    }
+
+    #message_courage{
+        font-size: 24px;
+    }
+
+    .linkedin-btn{
+        padding: 8px 18px;
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+

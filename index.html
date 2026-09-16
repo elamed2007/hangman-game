@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="style.css">
+    <style id="style">
+
+    </style>
+</head>
+<body>
+
+  <div id="hello" class="intro">
+    <pre>
+    السلام عليكم نبدأ لعبة بالأية تالية:
+    لآية 19 من سورة الانعام قال الله سبحانه وتعالى:
+     {"وَمَا الْحَيَاةُ الدُّنْيَا إِلَّا لَعِبٌ وَلَهْوٌ ۖ وَلَلدَّارُ الْآخِرَةُ خَيْرٌ لِّلَّذِينَ يَتَّقُونَ ۗ أَفَلَا تَعْقِلُونَ"}
+    </pre>
+  </div>
+
+  <div id="info_game" class="intro">
+    <h1 class="question">What is the game Hangman?</h1>
+    <pre class="info_p">It is a game where a player has to guess a word letter by letter.
+    With each incorrect letter, a part of a man is drawn (the gallows, the head, the body...).
+    If the drawing is complete before the word is found → the player loses.
+    If the player finds all the letters → he wins.</pre>
+    <button class="btn" id="btn_start">Start</button>
+  </div>
+    
+  <div id="game">
+    <div class="result">
+      <h1 class="title">Hangman</h1>
+      <div class="info">
+         <p id="categorie"></p>
+         <p id="N_attempts">incorrect guesses: 0/6</p>
+      </div>
+      <!--this div is a special status de hangman sous form image-->
+      <!-- Steam filled with js -->
+      <div id="Hangman"></div>
+    </div>  
+
+     <!-- this div is a special square for displaying the correct letter(les box en gray) -->
+     <!-- Steam filled with js -->
+    <div class="affichage"></div>
+
+    <div class="clavier">
+      <div class="key-row">
+        <button class="letter box" value="Q" onclick="checkLetter(this.value)">Q</button>
+        <button class="letter box" value="W" onclick="checkLetter(this.value)">W</button>
+        <button class="letter box" value="E" onclick="checkLetter(this.value)">E</button>
+        <button class="letter box" value="R" onclick="checkLetter(this.value)">R</button>
+        <button class="letter box" value="T" onclick="checkLetter(this.value)">T</button>
+        <button class="letter box" value="Y" onclick="checkLetter(this.value)">Y</button>
+        <button class="letter box" value="U" onclick="checkLetter(this.value)">U</button>
+        <button class="letter box" value="I" onclick="checkLetter(this.value)">I</button>
+        <button class="letter box" value="O" onclick="checkLetter(this.value)">O</button>
+        <button class="letter box" value="P" onclick="checkLetter(this.value)">P</button>
+      </div>
+      <div class="key-row key-row-2">
+        <button class="letter box" value="A" onclick="checkLetter(this.value)">A</button>
+        <button class="letter box" value="S" onclick="checkLetter(this.value)">S</button>
+        <button class="letter box" value="D" onclick="checkLetter(this.value)">D</button>
+        <button class="letter box" value="F" onclick="checkLetter(this.value)">F</button>
+        <button class="letter box" value="G" onclick="checkLetter(this.value)">G</button>
+        <button class="letter box" value="H" onclick="checkLetter(this.value)">H</button>
+        <button class="letter box" value="J" onclick="checkLetter(this.value)">J</button>
+        <button class="letter box" value="K" onclick="checkLetter(this.value)">K</button>
+        <button class="letter box" value="L" onclick="checkLetter(this.value)">L</button>
+      </div>
+      <div class="key-row key-row-3">
+        <button class="letter box" value="Z" onclick="checkLetter(this.value)">Z</button>
+        <button class="letter box" value="X" onclick="checkLetter(this.value)">X</button>
+        <button class="letter box" value="C" onclick="checkLetter(this.value)">C</button>
+        <button class="letter box" value="V" onclick="checkLetter(this.value)">V</button>
+        <button class="letter box" value="B" onclick="checkLetter(this.value)">B</button>
+        <button class="letter box" value="N" onclick="checkLetter(this.value)">N</button>
+        <button class="letter box" value="M" onclick="checkLetter(this.value)">M</button>
+      </div>
+    </div>
+
+
+  </div>
+    <!-- box Replay or Exit -->
+    <div id="box_end">
+      <div id="emoji"></div>
+      <p id="message_courage"></p>
+      <div>
+        <button id="btn_replay" class="btn">Replay</button>
+        <button id="btn_exit" class="btn">Exit</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+        <p class="footer-name">Mohammed Laabidi</p>
+        <p class="footer-desc">Guess the hidden word letter by letter and have fun!</p>
+        <div class="contact-btns">
+            <a href="tel:+212669003765" class="linkedin-btn">My number</a>
+            <a href="mailto:elamed2007@gmail.com" class="linkedin-btn">My Email</a>
+            <a href="https://www.linkedin.com/in/mohammed-laabidi-793a40436" class="linkedin-btn">My Linkedin</a>
+        </div>
+        <p>&copy; 2026 Hangman. All rights reserved.</p>
+    </footer>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

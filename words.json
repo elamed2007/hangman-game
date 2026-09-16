@@ -1,0 +1,164 @@
+﻿{
+  "categories": [
+    {
+      "id": 1,
+      "nom": "Computers",
+      "sub": [
+        "Laptops",
+        "Components",
+        "Accessories",
+        "Storage",
+        "Gaming",
+        "hardware",
+        "Software",
+        "Printers",
+        "Peripherals",
+        "Servers"
+      ]
+    },
+    {
+      "id": 2,
+      "nom": "Fashion",
+      "sub": [
+        "Men",
+        "Women",
+        "Children",
+        "Shoes",
+        "Bags",
+        "Watches",
+        "Jewelry",
+        "Sportswear",
+        "Accessories",
+        "Glasses"
+      ]
+    },
+    {
+      "id": 3,
+      "nom": "Home",
+      "sub": [
+        "Kitchen",
+        "Furniture",
+        "Lighting",
+        "Bathroom",
+        "Garden",
+        "DIY",
+        "Door",
+        "Storage",
+        "Bedding",
+        "refrigerator"
+      ]
+    },
+    {
+      "id": 4,
+      "nom": "Sports",
+      "sub": [
+        "Football",
+        "Basketball",
+        "Fitness",
+        "Swimming",
+        "Cycling",
+        "Tennis",
+        "Running",
+        "Yoga",
+        "Boxing",
+        "Bodybuilding"
+      ]
+    },
+    {
+      "id": 5,
+      "nom": "Electronics",
+      "sub": [
+        "Smartphones",
+        "TV",
+        "Audio",
+        "Headphones",
+        "Console",
+        "GPS",
+        "Cameras",
+        "Drones",
+        "Smartwatch",
+        "Auto electronics"
+      ]
+    },
+    {
+      "id": 6,
+      "nom": "Automotive",
+      "sub": [
+        "Tires",
+        "Accessories",
+        "Tuning",
+        "Car audio",
+        "Tools",
+        "engine",
+        "Oils & fluids",
+        "Transmission",
+        "Brakes",
+        "Battery"
+      ]
+    },
+    {
+      "id": 7,
+      "nom": "Beauty",
+      "sub": [
+        "Makeup",
+        "Perfumes",
+        "Hair",
+        "Beard",
+        "Organic products",
+        "Face care",
+        "Body care",
+        "Mascara",
+        "Nails",
+        "Eyeliner"
+      ]
+    },
+    {
+      "id": 8,
+      "nom": "Toys & Games",
+      "sub": [
+        "Puzzles",
+        "Figurines",
+        "Plush toys",
+        "Toy drones",
+        "Children's instruments",
+        "Educational games",
+        "Console",
+        "RC cars",
+        "Lego & blocks",
+        "Score"
+      ]
+    },
+    {
+      "id": 9,
+      "nom": "Books",
+      "sub": [
+        "Novels",
+        "Mangas",
+        "Science",
+        "History",
+        "Cooking",
+        "School books",
+        "Children",
+        "Author",
+        "Religion",
+        "Languages"
+      ]
+    },
+    {
+      "id": 10,
+      "nom": "Animals",
+      "sub": [
+        "Dogs",
+        "Cats",
+        "Birds",
+        "Fish",
+        "Rodents",
+        "Food",
+        "Pet toys",
+        "Pet accessories",
+        "Tiger",
+        "Lion"
+      ]
+    }
+  ]
+}
