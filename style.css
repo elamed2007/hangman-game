@@ -54,7 +54,6 @@ body{
      align-items: center;
      width: 100%;
      height: 100%;
-     filter: blur(10px);
 }
 
 .clavier{
@@ -91,7 +90,7 @@ body{
     max-width: 70px;
     height: 45px;
     background-color: black;
-    color: blue;
+color: #0d6efd;
     margin: 3px;
     border: none;
     box-shadow: 1px 1px 15px #000;
@@ -166,7 +165,7 @@ img{
     left: 50%;
     transform: translate(-50%,-50%);
     border-radius: 15px;
-    z-index: 1;
+    z-index: 2;
 }
 
 #hello{
@@ -213,6 +212,16 @@ img{
     }
 }
 
+.Separation_wall{
+    display: block;
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+}
+
 .question{
     position: relative;
     bottom: 50px;
@@ -223,16 +232,19 @@ img{
     text-align: justify;
     line-height: 30px;
     letter-spacing: 1px;
+    font-size: 18px;
     font-weight: 600;
     color: rgb(1, 31, 61);
-    text-wrap: wrap;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-width: 100%;
     
 }
 
 #btn_start{
     position: relative;
     top: 90px;
-    background-color: blue;
+    background-color: #0d6efd;
 }
 
 #btn_start:hover{
@@ -501,10 +513,30 @@ img{
     .intro,
     #box_end{
         width: 95%;
+        height: auto;
+        padding: 20px 12px;
+        max-height: 90vh;
+        overflow-y: auto;
     }
 
     #hello{
         font-size: 18px;
+        line-height: 28px;
+        white-space: pre-wrap;
+    }
+
+    .question{
+        position: static;
+    }
+
+    #btn_start{
+        position: static;
+        margin-top: 15px;
+    }
+
+    #message_courage{
+        position: static;
+        margin-bottom: 10px;
     }
 
     .info_p{

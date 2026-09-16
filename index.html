@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hangman</title>
-    <link rel="stylesheet" href="style.css">
-    <style id="style">
 
-    </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangman</title>
+  <link rel="stylesheet" href="style.css">
+  <style id="style">
+
+  </style>
 </head>
+
 <body>
 
-  <div id="hello" class="intro">
+  <section id="hello" class="intro">
     <pre>
     السلام عليكم نبدأ لعبة بالأية تالية:
     لآية 19 من سورة الانعام قال الله سبحانه وتعالى:
      {"وَمَا الْحَيَاةُ الدُّنْيَا إِلَّا لَعِبٌ وَلَهْوٌ ۖ وَلَلدَّارُ الْآخِرَةُ خَيْرٌ لِّلَّذِينَ يَتَّقُونَ ۗ أَفَلَا تَعْقِلُونَ"}
     </pre>
-  </div>
+  </section>
 
-  <div id="info_game" class="intro">
+  <section id="info_game" class="intro">
     <h1 class="question">What is the game Hangman?</h1>
     <pre class="info_p">It is a game where a player has to guess a word letter by letter.
     With each incorrect letter, a part of a man is drawn (the gallows, the head, the body...).
     If the drawing is complete before the word is found → the player loses.
     If the player finds all the letters → he wins.</pre>
     <button class="btn" id="btn_start">Start</button>
-  </div>
-    
-  <div id="game">
+  </section>
+
+
+  <section id="game">
+    <div class="Separation_wall"></div>
     <div class="result">
       <h1 class="title">Hangman</h1>
       <div class="info">
-         <p id="categorie"></p>
-         <p id="N_attempts">incorrect guesses: 0/6</p>
+        <p id="categorie"></p>
+        <p id="N_attempts">incorrect guesses: 0/6</p>
       </div>
       <!--this div is a special status de hangman sous form image-->
       <!-- Steam filled with js -->
       <div id="Hangman"></div>
-    </div>  
+    </div>
 
-     <!-- this div is a special square for displaying the correct letter(les box en gray) -->
-     <!-- Steam filled with js -->
+    <!-- this div is a special square for displaying the correct letter(les box en gray) -->
+    <!-- Steam filled with js -->
     <div class="affichage"></div>
 
     <div class="clavier">
@@ -79,8 +83,6 @@
       </div>
     </div>
 
-
-  </div>
     <!-- box Replay or Exit -->
     <div id="box_end">
       <div id="emoji"></div>
@@ -91,18 +93,22 @@
       </div>
     </div>
 
-    <footer class="footer">
-        <p class="footer-name">Mohammed Laabidi</p>
-        <p class="footer-desc">Guess the hidden word letter by letter and have fun!</p>
-        <div class="contact-btns">
-            <a href="tel:+212669003765" class="linkedin-btn">My number</a>
-            <a href="mailto:elamed2007@gmail.com" class="linkedin-btn">My Email</a>
-            <a href="https://www.linkedin.com/in/mohammed-laabidi-793a40436" class="linkedin-btn">My Linkedin</a>
-        </div>
-        <p>&copy; 2026 Hangman. All rights reserved.</p>
-    </footer>
+  </section>
 
-    
-    <script src="script.js"></script>
+
+  <footer class="footer">
+    <p class="footer-name">Mohammed Laabidi</p>
+    <p class="footer-desc">Guess the hidden word letter by letter and have fun!</p>
+    <div class="contact-btns">
+      <a href="tel:+212669003765" class="linkedin-btn">My number</a>
+      <a href="mailto:elamed2007@gmail.com" class="linkedin-btn">My Email</a>
+      <a href="https://www.linkedin.com/in/mohammed-laabidi-793a40436" class="linkedin-btn">My Linkedin</a>
+    </div>
+    <p>&copy; 2026 Hangman. All rights reserved.</p>
+  </footer>
+
+
+  <script src="script.js"></script>
 </body>
+
 </html>

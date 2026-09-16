@@ -6,20 +6,21 @@ let btn_start = document.getElementById("btn_start")
 let info_game = document.getElementById("info_game")
 let gameBox = document.getElementById("game")
 let hello = document.getElementById("hello")
+const Separation_wall = document.querySelector(".Separation_wall")
 let word = ""
 let wordLength = ""
 
 btn_start.onclick = function(){
    info_game.style.display = "none"
-   gameBox.style.filter = "blur(0)" 
+   Separation_wall.style.display = "none"
 }
 
 
 
 if(localStorage.user == "visited"){
-    gameBox.style.filter = "blur(0)"
-    info_game.style.display ="none"
-    hello.style.display ="none"
+   Separation_wall.style.display = "none"
+   info_game.style.display ="none"
+   hello.style.display ="none"
 }
 
 localStorage.user = ""
