@@ -17,8 +17,6 @@ body{
 
 /* this style only appiles to btn replay et exit */
 .btn{
-    position: relative;
-    bottom: 40px;
     text-align: center;
     width: 100px;
     height: 40px;
@@ -242,8 +240,7 @@ img{
 }
 
 #btn_start{
-    position: relative;
-    top: 90px;
+    margin-top: 30px;
     background-color: #0d6efd;
 }
 
@@ -286,14 +283,19 @@ img{
     font-size: 140px;
 }
 
+#box_end > div{
+    margin-top: auto;
+    padding-bottom: 20px;
+}
+
 #message_courage{
     font-size: 50px;
     font-weight: 600;
     text-align: center;
-    text-wrap: nowrap;
-    position: relative;
-    bottom: 40px;
-    direction: rtl;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-width: 90%;
+    direction: ltr;
 }
 
 #btn_replay{

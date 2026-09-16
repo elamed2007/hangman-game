@@ -86,10 +86,10 @@ function checkLetter(letter){
       let emoji = document.getElementById("emoji")
       let message_courage = document.getElementById("message_courage")
       
-      if(word == " "*word_size){
+      if(word == " "*wordLength){
          box_end.style.display = "flex"
          emoji.innerHTML = "&#128512;"
-         message_courage.innerHTML = "كمل، راك عْجبْنا الحمد لله  &#127881;"
+         message_courage.innerHTML = "Congratulations! You won, well done! &#127881;"
       }
    // the letter is not present in the word
    }else{
@@ -103,7 +103,7 @@ function checkLetter(letter){
          count = count
          box_end.style.display = "flex"
          emoji.innerHTML = "&#128512;"
-         message_courage.innerHTML = "ختّي/خويا تبارك الله عليك، درتي مجهودك. إن شاء الله فالمرجاية تربح. &#x2764;"
+         message_courage.innerHTML = "Good try! Don't give up, you'll win next time. Better luck next round! &#x2764;"
       }
 
       
